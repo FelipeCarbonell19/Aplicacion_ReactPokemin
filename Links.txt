@@ -2,4 +2,4 @@ AWS
 https://main.d20a3m0rjz1htp.amplifyapp.com
 
 Netlify
-https://629bc0dd0db4083933ce3b08--cosmic-kleicha-fb9517.netlify.app
+https://melodic-chebakia-a56acc.netlify.app

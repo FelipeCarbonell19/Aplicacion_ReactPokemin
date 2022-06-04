@@ -4,12 +4,12 @@ import 'firebase/firestore'
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCgY9f16W0o-CqqamvICqxbdcQNsftMG3k",
-  authDomain: "pokeapp-8cbe2.firebaseapp.com",
-  projectId: "pokeapp-8cbe2",
-  storageBucket: "pokeapp-8cbe2.appspot.com",
-  messagingSenderId: "222581828208",
-  appId: "1:222581828208:web:ce6300fd126c1c87a9e2b5"
+  apiKey: "AIzaSyCB6ZswoyP91AwQ4V-kUqtJRETnGuOS8BY",
+  authDomain: "pokeapp-2216c.firebaseapp.com",
+  projectId: "pokeapp-2216c",
+  storageBucket: "pokeapp-2216c.appspot.com",
+  messagingSenderId: "355670371515",
+  appId: "1:355670371515:web:c243f39253dc0511e30d9e"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
