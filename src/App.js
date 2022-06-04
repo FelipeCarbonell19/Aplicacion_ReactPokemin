@@ -1,23 +1,47 @@
-import logo from './logo.svg';
 import './App.css';
+import { useState } from 'react'
+import React from "react"
+import { Formulario } from './components/Formulario';
+import { Contenedor } from './components/Contenedor'
+import {firebase} from './firebase'
 
-function App() {
+const App = ({categorias = []}) => {
+  const [categoriasBusqueda, setCategoriasBusqueda] = useState(categorias);
+  const [lista, setLista] = useState([])
+
+  React.useEffect(()=>{
+    const obtenerDatos = async () =>{
+        try{
+            const db = firebase.firestore()
+            const data = await db.collection('PokeAPP').get()
+            const array = data.docs.map(item =>(
+                {
+                    id:item.id, ...item.data()
+                }
+            ))
+            setLista(array)
+
+        }catch(error){
+            console.log(error)
+        }
+    }
+    obtenerDatos()
+}, [lista])
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+        <hr className='hr'/>
+        <Formulario setCategoriasBusqueda={setCategoriasBusqueda}/>
+        <ol>
+        {
+            lista.map(item => (
+                <Contenedor
+                    key = {item.id} 
+                    valorBusqueda={item}
+                />
+            ))
+        }
+    </ol>
     </div>
   );
 }

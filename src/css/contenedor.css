@@ -1,0 +1,47 @@
+body{
+    padding: 40px;
+    font-family:monospace;
+    background: rgb(157,151,255);
+    background: linear-gradient(90deg, rgba(157,151,255,1) 0%, rgba(214,214,252,1) 35%, rgba(0,212,255,1) 100%);
+}
+.contenedor{
+    background-color: #fff;
+    display: flex;
+    align-content: center;
+    border: 3px solid grey;
+    border-radius: 10px;
+    width:30%;
+    height: 350px;
+    overflow: hidden;
+    margin-bottom: 10px;
+    margin-right: 20px;
+}
+
+img{
+    width: 200px;
+}
+
+.canecatbn{
+    border: none;
+    width: 40px;
+    height: 40px;
+    margin: 3px;
+    border-radius: 7px;
+    color: black;
+    font-size: 15px;
+    background-color: yellowgreen;  
+}
+
+.canecatbn:hover{
+    background-color: white;
+    color: black;
+    transition: 0.5s;
+}
+
+.spCard{
+  background-color: rgba(253, 198, 194, 0.5);
+  height: 1.5px;
+  width: 85%;
+  border: none;
+  margin-bottom: 5px;
+}
