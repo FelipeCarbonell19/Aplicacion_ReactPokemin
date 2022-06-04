@@ -6,11 +6,11 @@ import { Contenedor } from './components/Contenedor'
 import {firebase} from './firebase'
 
 const App = ({categorias = []}) => {
-  const [categoriasBusqueda, setCategoriasBusqueda] = useState(categorias);
+  const [busquedaCat, setCategoriasBusqueda] = useState(categorias);
   const [lista, setLista] = useState([])
 
   React.useEffect(()=>{
-    const obtenerDatos = async () =>{
+    const datosPokemones = async () =>{
         try{
             const db = firebase.firestore()
             const data = await db.collection('PokeAPP').get()
@@ -25,7 +25,7 @@ const App = ({categorias = []}) => {
             console.log(error)
         }
     }
-    obtenerDatos()
+    datosPokemones()
 }, [lista])
 
   return (
