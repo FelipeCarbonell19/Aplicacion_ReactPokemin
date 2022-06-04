@@ -2,4 +2,4 @@ AWS
 https://main.d20a3m0rjz1htp.amplifyapp.com
 
 Netlify
-https://melodic-chebakia-a56acc.netlify.app
+https://629bd0a14717ce4636561be2--eloquent-cupcake-b95af1.netlify.app
